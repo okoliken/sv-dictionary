@@ -50,7 +50,7 @@
 <div
   style="font-family:{font};"
   class="container mx-auto h-full flex items-center justify-center flex-col w-full
-  max-w-[737px] transition-all duration-150 ease-linear px-6 lg:px-0"
+  max-w-[737px] transition-all duration-150 ease-linear px-6 lg:px-0 dark:bg-[#050505]"
 >
   <div class="w-full pt-4 lg:pt-12">
     <div class="relative">
