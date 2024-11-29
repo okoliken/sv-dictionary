@@ -26,8 +26,7 @@
     }
   };
 
-  
-  const getAudioTracks = (data: Array<Phonetic>) => {
+ const getAudioTracks = (data: Array<Phonetic>) => {
       const audios = data
       .map((item) => item?.audio)
       .filter(audio => audio !== "");
