@@ -16,11 +16,9 @@
   };
 
   onMount(() => {
-    // Get stored preference, default to false if not set
     const storedPreference = localStorage.getItem("isToggled");
     const isDark = storedPreference ? JSON.parse(storedPreference) : false;
     
-    // Set initial state
     changeTheme(isDark);
     darkModeReady = true;
   });
