@@ -60,11 +60,15 @@
   };
 
   onMount(() => {
-    darkMode = JSON.parse(JSON.stringify(localStorage.getItem("isToggled")));
+    const storedTheme = localStorage.getItem("isToggled");
+    darkMode = storedTheme ? JSON.parse(storedTheme) : false;
 
     if (darkMode) {
       document.documentElement.classList.add("dark");
-    } else localStorage.setItem("isToggled", JSON.stringify(false));
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("isToggled", "false");
+    }
   });
 
   const handleFontSwitch = (newFont: string) => {

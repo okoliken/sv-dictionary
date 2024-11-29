@@ -8,6 +8,9 @@
     toggleTheme,
   }: { id: string; toggleTheme: (val: boolean) => void } = $props();
 
+
+  
+
   const changeTheme = (val: boolean) => {
     darkMode = val;
     document.documentElement.classList.toggle("dark", val);
@@ -16,9 +19,10 @@
   };
 
   onMount(() => {
+   const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const storedPreference = localStorage.getItem("isToggled");
-    const isDark = storedPreference ? JSON.parse(storedPreference) : false;
-    
+    const isDark = storedPreference ? JSON.parse(storedPreference) : prefersDarkMode;
+
     changeTheme(isDark);
     darkModeReady = true;
   });
