@@ -2,6 +2,7 @@
   import IconPlay from "../icons/IconPlay.svelte";
   import IconPause from "../icons/IconPause.svelte";
   import PlayButton from "./PlayButton.svelte";
+  import IconBrokenAudio from "../icons/IconBrokenAudio.svelte";
   import {
     type Definition,
     type DictionaryResponse,
@@ -101,9 +102,6 @@
   </div>
 {/snippet}
 
-{#snippet IconBrokenAudio()}
-  <IconBrokenAudio />
-{/snippet}
 
 {#each meaning as { word, sourceUrls, phonetics, phonetic, meanings }}
   <div class="mt-12">
@@ -123,7 +121,7 @@
       {:else}
        
         <PlayButton handleClick={play}>
-          {@render IconBrokenAudio()}
+          <IconBrokenAudio />
         </PlayButton>
     
       {/if}
