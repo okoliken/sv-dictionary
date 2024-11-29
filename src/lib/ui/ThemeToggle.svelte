@@ -19,7 +19,7 @@
   };
 
   onMount(() => {
-   const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const storedPreference = localStorage.getItem("isToggled");
     const isDark = storedPreference ? JSON.parse(storedPreference) : prefersDarkMode;
 
