@@ -2,7 +2,6 @@
   import Input from "./lib/ui/Input.svelte";
   import { onMount } from "svelte";
   import { fade, slide } from 'svelte/transition';
-
   import ThemeIcon from "./lib/icons/ThemeIcon.svelte";
   import BookLogo from "./lib/icons/BookLogo.svelte";
   import ThemeToggle from "./lib/ui/ThemeToggle.svelte";
@@ -42,7 +41,7 @@
           title: data.title,
           message: data.message,
           resolution: data.resolution,
-        }; // This will contain the error object with title, message, and resolution
+        }; 
       }
     } catch (error) {
       error = {
