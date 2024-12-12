@@ -75,8 +75,6 @@
     font = newFont;
     showSelect = false;
   };
-
-  const TRANSITION_DURATION = 200; // milliseconds
 </script>
 
 <div
@@ -113,18 +111,18 @@
     <Input searchWord={searchForWords} />
 
     {#if searching}
-      <div transition:fade={{ duration: TRANSITION_DURATION }}>
+      <div transition:fade={{ duration: 200 }}>
         <Skeleton />
       </div>
     {/if}
 
     {#if meaning.length > 0 && !searching}
-      <div transition:fade={{ duration: TRANSITION_DURATION }}>
+      <div in:fade={{ duration: 200, delay: 200 }}>
         <Meanings {meaning} />
       </div>
     {:else if error}
       <div
-        transition:slide={{ duration: TRANSITION_DURATION }}
+        transition:slide={{ duration: 200 }}
         class="mt-12 text-center flex items-center justify-center flex-col gap-y-4"
       >
         <div class="mb-5">
